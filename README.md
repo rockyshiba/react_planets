@@ -1,6 +1,6 @@
 # Changes
 
-Click events to retrieve a single planet from API.
+Added Helmet to change document title.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

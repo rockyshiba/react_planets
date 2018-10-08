@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Helmet from 'react-helmet';
 
 class Planets extends React.Component{
     constructor(props){
@@ -49,6 +50,9 @@ class Planets extends React.Component{
     render(){
         return(
             <div id="planetInfo">
+                <Helmet>
+                    <title>Planets</title>
+                </Helmet>
                 <ul>
                     {
                         // use .map to iterate through an array
