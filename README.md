@@ -1,6 +1,8 @@
 # Changes
 
-Added Helmet to change document title.
+Planet, singular, now in its own component and exported to index.js.
+
+Title dynamically changes because Helmet is used in Planet component. When no planet is selected, Title goes back to title defined in index.js. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

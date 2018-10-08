@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Helmet from 'react-helmet';
 
+import Planet from './Planet';
+
 class Planets extends React.Component{
     constructor(props){
         super(props);
@@ -41,6 +43,12 @@ class Planets extends React.Component{
         );
     }
 
+    clearPlanet(){
+        this.setState({
+            planet: null
+        });
+    }
+
     // this is a predefined method that fires when the component loads on page
     componentDidMount(){
         // when the component loads, populate the planets array using the getPlanets method
@@ -60,13 +68,9 @@ class Planets extends React.Component{
                         this.state.planets.map((planet) => <li key={planet.id} onClick={(e) => this.getPlanet(planet.id)}>{planet.name}</li>)
                     }
                 </ul>
+                <button onClick={(e) => this.clearPlanet()}>Clear planet</button>
                 {this.state.planet &&
-                    <div>
-                        <h2>{this.state.planet.name}</h2>
-                        <p>
-                            {this.state.planet.description}
-                        </p>
-                    </div>
+                    <Planet planet={this.state.planet} />
                 }
             </div>
         );
